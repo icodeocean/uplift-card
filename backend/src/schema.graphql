@@ -1,0 +1,16 @@
+type Card {
+  number: Int,
+}
+
+type ResetMutationResponse {
+  success: Boolean,
+  cards: [Card],
+}
+
+type Query {
+  deal: [Card]
+}
+
+type Mutation {
+  reset: ResetMutationResponse
+}

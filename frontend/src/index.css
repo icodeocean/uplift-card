@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Courier Prime';
+  font-weight: bold;
+  background-image: linear-gradient(#15803d, #166534);
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.text-red {
+  color: #ef4444 !important;
+}
+
+.active {
+  transform: perspective(700px) rotateY(180deg);
+}
+
+.canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.card {
+  width: 200px;
+  height: 280px;
+  background-color: whitesmoke;
+  font-size: 90px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  position: relative;
+  animation-fill-mode: forwards;
+  top: -700px;
+  margin: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: apear;
+}
+
+
+.small-image {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -20px;
+}
+
+.big-image {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 60px;
+  top: -20px;
+}
+
+@keyframes apear {
+  from {opacity: 0;}  
+  to {opacity: 1;}
+}
+
+.index0 {
+  animation-name: appear0;
+  animation-delay: 0s;
+}
+
+.index1 {
+  animation-name: appear1;
+  animation-delay: 0.5s;
+}
+
+.index2 {
+  animation-name: appear2;
+  animation-delay: 1s;
+}
+
+.index3 {
+  animation-name: appear3;
+  animation-delay: 1.5s;
+}
+
+.index4 {
+  animation-name: appear4;
+  animation-delay: 2s;
+}
+
+.index5 {
+  animation-name: appear5;
+}
+
+@keyframes appear0 {
+  from {left: 100px; top: -700px; opacity: 0;}
+  to {left: 0px; top: 0px; opacity: 1;}
+}
+
+@keyframes appear1 {
+  from {left: 100px; top: -700px; opacity: 0;}
+  to {left: 0px; top: 0px; opacity: 1;}
+}
+
+@keyframes appear2 {
+  from {left: 0px; top: -700px; opacity: 0;}
+  to {left: 0px; top: 0px; opacity: 1;}
+}
+
+@keyframes appear3 {
+  from {left: -100px; top: -700px; opacity: 0;}
+  to {left: 0px; top: 0px; opacity: 1;}
+}
+
+@keyframes appear4 {
+  from {left: -100px; top: -700px; opacity: 0;}
+  to {left: 0px; top: 0px; opacity: 1;}
+}
+
+@keyframes appear5 {
+  from {left: 0px; top: -700px; opacity: 0;}
+  to {left: 0px; top: 0px; opacity: 1;}
+}
+
+.score-panel {
+  background-color: black;
+  width: 220px;
+  height: 140px;
+  color: white;
+  border-style: solid;
+  border: 1px solid rgb(252 211 77);
+}
+
+.padding-top-score {
+  padding-top: 64px;
+}
+
+.big-font-size {
+  font-size: 60px;
+}
+
+.small-font-size {
+  font-size: 23px;
+}
+
+.big-button-style {
+  width: 320px;
+  height: 112px;
+  font-size: 60px;
+}
+
+.reset-button-style {
+  width: 192px;
+  height: 80px;
+  font-size: 40px;
+  bottom:20px;
+  right:20px;
+  position: absolute;
+}
+
+.rotate-24 {
+  rotate: '24deg';
+}
+
+.-rotate-24 {
+  rotate: '-24eg';
+}
+
+.again-button-style {
+  width: 256px;
+  height: 80px;
+  font-size: 36px;
+}
+
+.board-style {
+  padding: 80px;
+  min-height: 78vh;
+}
+
+.footer-text-style {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 375px) {
+  .footer-text-style {
+    font-size: 26px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .board-style {
+    padding: 10px;
+    min-height: 82vh;
+  }
+
+  .big-button-style {
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+  }
+  
+  .reset-button-style {
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    bottom: 0px;
+    right: 0px;
+    margin-top: 10px;
+    position: inherit;
+  }
+
+  .again-button-style {
+    margin-top: 10px;
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .big-font-size {
+    font-size: 40px;
+  }
+
+  .small-font-size {
+    font-size: 15px;
+  }
+
+  .padding-top-score {
+    padding-top: 20px;
+  }
+  .score-panel {
+    width: 180px;
+    height: 100px;
+  }
+  .card {
+    width: 100px;
+    height: 140px;
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: auto;
+    border-radius: 12px;
+    margin: 5px;
+  }
+  .small-image {
+    width: 25px;
+    height: 25px;
+    top: -15px;
+  }
+  .big-image {
+    width: 50px;
+    height: 50px;
+    left: 30px;
+    top: -10px;
+  }
+}
